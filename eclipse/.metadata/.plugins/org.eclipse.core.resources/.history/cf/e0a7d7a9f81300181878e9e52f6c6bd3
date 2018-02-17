@@ -1,0 +1,58 @@
+package com.cookiehook.armorexpansion.item;
+
+import com.cookiehook.armorexpansion.help.Reference;
+import com.cookiehook.armorexpansion.init.ModItems;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
+
+public class ItemRedstoneArmor extends BaseArmor {
+	
+	/**
+	 * Creates an armor item, using the following parameters.
+	 * @param material - The ArmorMaterial needed. This sets properties such as durability, efficiency etc.
+	 * @param renderIndex - Used by vanilla armor to choose a texture. We override this with getArmorTexture.
+	 * @param armorType - Whether this is a helmet (0), chestplate (1), leggings (2) or boots (3).
+	 * @param name - Name used for unlocalised and texture names.
+	 */
+	public ItemRedstoneArmor(ArmorMaterial material, int renderIndex, int armorType, String name) {
+		//This super call passes all the arguments to the BaseArmor constructor, which actually does the work.
+		super(material, renderIndex, armorType, name);
+	}
+
+	/*
+	 * 
+	 */
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack armor) {
+		if (player.getCurrentArmor(3) != null 
+				&& player.getCurrentArmor(3).getItem() instanceof ItemRedstoneArmor 
+				&& player.getCurrentArmor(2) != null 
+				&& player.getCurrentArmor(2).getItem() instanceof ItemRedstoneArmor
+				&& player.getCurrentArmor(1) != null 
+				&& player.getCurrentArmor(1).getItem() instanceof ItemRedstoneArmor 
+				&& player.getCurrentArmor(0) != null 
+				&& player.getCurrentArmor(0).getItem() instanceof ItemRedstoneArmor) {
+			player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 20, 0));
+		}
+	}
+
+	@Override
+	public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+		if (armor.getItem() == ModItems.redstone_leggings) {
+			return Reference.MOD_ID + ":textures/models/armor/redstone_layer_2.png";
+		} else {
+			return Reference.MOD_ID + ":textures/models/armor/redstone_layer_1.png";
+		}
+	}
+
+	@Override
+	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
+		return stack.getItem() == ModItems.redstone_ingot;
+	}
+}

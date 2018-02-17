@@ -1,0 +1,5 @@
+package com.cookiehook.armourexpansion.item;
+
+public class BaseIngot {
+
+}

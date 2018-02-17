@@ -1,0 +1,14 @@
+package com.cookiehook.armourexpansion.item;
+
+import net.minecraft.item.ItemSword;
+
+public class ItemModSword extends ItemSword
+{
+	public final ToolMaterial toolMaterial;
+	
+	public ItemModSword(ToolMaterial EnumToolMaterial)
+	{
+		super(EnumToolMaterial);
+		toolMaterial = EnumToolMaterial;
+	}
+}

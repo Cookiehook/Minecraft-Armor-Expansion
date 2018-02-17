@@ -1,0 +1,16 @@
+package com.cookiehook.armourexpansion.item;
+
+import com.cookiehook.armorexpansion.init.ModTabs;
+
+import net.minecraft.item.ItemArmor;
+
+public class BaseArmor extends ItemArmor {
+
+	public BaseArmor(ArmorMaterial material, int renderIndex, int armorType, String name) {
+		super(material, renderIndex, armorType);
+		setUnlocalizedName(name);
+		setTextureName("armorexpansion:" + name);
+		setCreativeTab(ModTabs.getArmorTab());
+	}
+
+}

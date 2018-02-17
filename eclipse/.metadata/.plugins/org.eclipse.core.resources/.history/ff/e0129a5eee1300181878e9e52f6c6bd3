@@ -1,0 +1,18 @@
+package com.cookiehook.armorexpansion.item;
+
+import com.cookiehook.armorexpansion.init.ModTabs;
+
+import net.minecraft.item.ItemHoe;
+
+public class ItemModHoe extends ItemHoe {
+	
+	public final ToolMaterial toolMaterial;
+
+	public ItemModHoe(ToolMaterial toolMaterial, String name) {
+		super(toolMaterial);
+		this.toolMaterial = toolMaterial;
+		setUnlocalizedName(name);
+		setTextureName("armorexpansion:" + name);
+		setCreativeTab(ModTabs.getToolsTab());
+	}
+}

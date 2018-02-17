@@ -1,0 +1,9 @@
+package com.cookiehook.armorexpansion.tabs;
+
+
+public enum OreDictionaryPriority {
+	ORE,
+	INGOT,
+	DUST,
+	NONE
+}
