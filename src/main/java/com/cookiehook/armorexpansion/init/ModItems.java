@@ -11,14 +11,17 @@ import com.cookiehook.armorexpansion.item.ItemModSpade;
 import com.cookiehook.armorexpansion.item.ItemModSword;
 import com.cookiehook.armorexpansion.item.ItemQuartzArmor;
 import com.cookiehook.armorexpansion.item.ItemRedstoneArmor;
+import com.cookiehook.armorexpansion.util.Reference;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
 
@@ -156,11 +159,11 @@ public class ModItems {
 		 * GOLD(7, new int[]{2, 5, 3, 1}, 25),
 		 * DIAMOND(33, new int[]{3, 8, 6, 3}, 10);
 		 */
-		LapisArmorMaterial = EnumHelper.addArmorMaterial("LapisArmorMaterial", 10, new int[] { 2, 6, 5, 2 }, 15);
-		RedstoneArmorMaterial = EnumHelper.addArmorMaterial("RedstoneArmorMaterial", 10, new int[] { 2, 6, 5, 2 }, 15);
-		QuartzArmorMaterial = EnumHelper.addArmorMaterial("QuartzArmorMaterial", 10, new int[] { 2, 6, 5, 2 }, 15);
-		GlowstoneArmorMaterial = EnumHelper.addArmorMaterial("GlowstoneArmorMaterial", 10, new int[] { 2, 6, 5, 2 }, 15);
-		EmeraldArmorMaterial = EnumHelper.addArmorMaterial("EmeraldArmorMaterial", 40, new int[] { 4, 8, 6, 4 }, 15);
+		LapisArmorMaterial = EnumHelper.addArmorMaterial("LapisArmorMaterial", "", 10, new int[] { 2, 6, 5, 2 }, 15);
+		RedstoneArmorMaterial = EnumHelper.addArmorMaterial("RedstoneArmorMaterial","", 10, new int[] { 2, 6, 5, 2 }, 15);
+		QuartzArmorMaterial = EnumHelper.addArmorMaterial("QuartzArmorMaterial", "",10, new int[] { 2, 6, 5, 2 }, 15);
+		GlowstoneArmorMaterial = EnumHelper.addArmorMaterial("GlowstoneArmorMaterial","", 10, new int[] { 2, 6, 5, 2 }, 15);
+		EmeraldArmorMaterial = EnumHelper.addArmorMaterial("EmeraldArmorMaterial", "",40, new int[] { 4, 8, 6, 4 }, 15);
 
 		
 		
@@ -296,4 +299,68 @@ public class ModItems {
 		GameRegistry.registerItem(emerald_leggings, emerald_leggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(emerald_boots, emerald_boots.getUnlocalizedName().substring(5));
 	}
+	
+	/** 
+	 * Implements rendering of the items in the inventory. Otherwise we get the black and purple cubes.
+	 * Should be called in init.
+	 * */
+	  public static void registerRenders()
+	  {
+	    registerRender(lapis_lazuli_ingot);
+	    registerRender(redstone_ingot);
+	    registerRender(quartz_ingot);
+	    registerRender(glowstone_ingot);
+	    
+	    registerRender(lapis_sword);
+	    registerRender(lapis_pickaxe);
+	    registerRender(lapis_spade);
+	    registerRender(lapis_axe);
+	    registerRender(lapis_hoe);
+	    registerRender(redstone_sword);
+	    registerRender(redstone_pickaxe);
+	    registerRender(redstone_spade);
+	    registerRender(redstone_axe);
+	    registerRender(redstone_hoe);
+	    registerRender(quartz_sword);
+	    registerRender(quartz_pickaxe);
+	    registerRender(quartz_spade);
+	    registerRender(quartz_axe);
+	    registerRender(quartz_hoe);
+	    registerRender(glowstone_sword);
+	    registerRender(glowstone_pickaxe);
+	    registerRender(glowstone_spade);
+	    registerRender(glowstone_axe);
+	    registerRender(glowstone_hoe);
+	    registerRender(emerald_sword);
+	    registerRender(emerald_pickaxe);
+	    registerRender(emerald_spade);
+	    registerRender(emerald_axe);
+	    registerRender(emerald_hoe);
+	    
+	    registerRender(lapis_helmet);
+	    registerRender(lapis_chestplate);
+	    registerRender(lapis_leggings);
+	    registerRender(lapis_boots);
+	    registerRender(redstone_helmet);
+	    registerRender(redstone_chestplate);
+	    registerRender(redstone_leggings);
+	    registerRender(redstone_boots);
+	    registerRender(quartz_helmet);
+	    registerRender(quartz_chestplate);
+	    registerRender(quartz_leggings);
+	    registerRender(quartz_boots);
+	    registerRender(glowstone_helmet);
+	    registerRender(glowstone_chestplate);
+	    registerRender(glowstone_leggings);
+	    registerRender(glowstone_boots);
+	    registerRender(emerald_helmet);
+	    registerRender(emerald_chestplate);
+	    registerRender(emerald_leggings);
+	    registerRender(emerald_boots);
+	  }
+	  
+	  private static void registerRender(Item item)
+	  {
+	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	  }
 }

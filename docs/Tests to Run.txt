@@ -1,7 +1,9 @@
 Check that all armor correctly gives potion effects.
 Check that lapis armor adds and removes appropriate enchantments.
-Check that all armor and tools repair using the correct items.
-Check that all crafting recipes are available (left pointing hoes & axes only).
+Check that lapis armor behaves correctly with pre-enchanted armor.
+Check that all armor and tools repair using t/he correct items.
+Check that all crafting recipes are available (left pointing hoes & axes only). Include material blocks.
+Check that all smelting recipes are available.
 
 Check that built mod loads on a client.
 Check that the mod loads on a server.
