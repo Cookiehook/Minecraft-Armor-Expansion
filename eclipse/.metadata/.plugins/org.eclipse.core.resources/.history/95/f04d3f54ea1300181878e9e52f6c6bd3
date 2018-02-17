@@ -1,0 +1,18 @@
+package com.cookiehook.armourexpansion.item;
+
+import com.cookiehook.armourexpansion.init.ModTabs;
+
+import net.minecraft.item.ItemPickaxe;
+
+public class ItemModPickaxe extends ItemPickaxe {
+	
+	public final ToolMaterial toolMaterial;
+
+	public ItemModPickaxe(ToolMaterial toolMaterial, String name) {
+		super(toolMaterial);
+		this.toolMaterial = toolMaterial;
+		setUnlocalizedName(name);
+		setTextureName("armorexpansion:" + name);
+		setCreativeTab(ModTabs.getToolsTab());
+	}
+}

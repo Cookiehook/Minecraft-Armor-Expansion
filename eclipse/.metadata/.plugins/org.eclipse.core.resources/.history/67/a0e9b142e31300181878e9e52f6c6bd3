@@ -1,0 +1,10 @@
+package com.cookiehook.armourexpansion.init;
+
+import com.cookiehook.armourexpansion.tabs.ArmourTab;
+import com.cookiehook.armourexpansion.tabs.ToolsTab;
+
+public class ModTabs {
+	
+	public static final ArmourTab tabarmour = new ArmourTab("tabArmour");
+	public static final ToolsTab tabtools = new ToolsTab("tabTools");
+}

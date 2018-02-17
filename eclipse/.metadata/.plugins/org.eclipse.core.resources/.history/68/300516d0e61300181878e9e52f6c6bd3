@@ -1,0 +1,14 @@
+package com.cookiehook.armourexpansion.item;
+
+import net.minecraft.item.ItemHoe;
+
+public class ItemModHoe extends ItemHoe
+{
+	public final ToolMaterial toolMaterial;
+	
+	public ItemModHoe(ToolMaterial EnumToolMaterial)
+	{
+		super(EnumToolMaterial);
+		toolMaterial = EnumToolMaterial;
+	}
+}

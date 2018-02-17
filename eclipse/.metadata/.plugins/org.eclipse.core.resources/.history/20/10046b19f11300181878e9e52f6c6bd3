@@ -1,0 +1,22 @@
+package com.cookiehook.armorexpansion.tabs;
+
+import com.cookiehook.armorexpansion.init.ModItems;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class ArmourTab extends CreativeTabs
+{
+
+	public ArmourTab(String label) 
+	{
+		super(label);
+	}
+	
+	@Override
+	public Item getTabIconItem()
+	{
+		 return ModItems.emerald_helmet;
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.cookiehook.armourexpansion.init;
+
+import com.cookiehook.armourexpansion.tabs.ArmourTab;
+import com.cookiehook.armourexpansion.tabs.ToolsTab;
+
+import net.minecraft.creativetab.CreativeTabs;
+
+public class ModTabs {
+
+	private static final ArmourTab tabarmour = new ArmourTab("tabArmour");
+	private static final ToolsTab tabtools = new ToolsTab("tabTools");
+
+	public static CreativeTabs getArmorTab() {
+		return tabarmour;
+	}
+
+	public static CreativeTabs getToolsTab() {
+		return tabtools;
+	}
+}

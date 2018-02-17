@@ -1,0 +1,18 @@
+package com.cookiehook.armourexpansion.item;
+
+import com.cookiehook.armourexpansion.init.ModTabs;
+
+import net.minecraft.item.ItemSword;
+
+public class ItemModSword extends ItemSword {
+	
+	public final ToolMaterial toolMaterial;
+
+	public ItemModSword(ToolMaterial EnumToolMaterial, String name) {
+		super(EnumToolMaterial);
+		this.toolMaterial = EnumToolMaterial;
+		setUnlocalizedName(name);
+		setTextureName("armourexpansion:" + name);
+		setCreativeTab(ModTabs.getToolsTab());
+	}
+}

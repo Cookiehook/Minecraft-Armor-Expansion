@@ -1,0 +1,22 @@
+package com.cookiehook.armourexpansion.tabs;
+
+import com.cookiehook.armourexpansion.init.ModItems;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class ToolsTab extends CreativeTabs
+{
+
+	public ToolsTab(String label) 
+	{
+		super(label);
+	}
+	
+	@Override
+	public Item getTabIconItem()
+	{
+		 return ModItems.lapis_sword;
+	}
+
+}

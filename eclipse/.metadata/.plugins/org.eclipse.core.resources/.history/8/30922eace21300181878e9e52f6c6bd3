@@ -1,0 +1,222 @@
+package com.cookiehook.armourexpansion.init;
+
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
+
+import com.cookiehook.armourexpansion.Main;
+import com.cookiehook.armourexpansion.item.ItemEmeraldArmor;
+import com.cookiehook.armourexpansion.item.ItemGlowstoneArmor;
+import com.cookiehook.armourexpansion.item.ItemLapisArmor;
+import com.cookiehook.armourexpansion.item.ItemModAxe;
+import com.cookiehook.armourexpansion.item.ItemModHoe;
+import com.cookiehook.armourexpansion.item.ItemModPickaxe;
+import com.cookiehook.armourexpansion.item.ItemModSpade;
+import com.cookiehook.armourexpansion.item.ItemModSword;
+import com.cookiehook.armourexpansion.item.ItemQuartzArmor;
+import com.cookiehook.armourexpansion.item.ItemRedstoneArmor;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class ModItems 
+{
+	//Ingots
+		public static Item lapis_lazuli_ingot;
+		public static Item redstone_ingot;
+		public static Item quartz_ingot;
+		public static Item glowstone_ingot;
+		/*Tools (harvest tier, uses, efficiency, damage, enchantability) 
+		WOOD(0, 59, 2.0F, 0.0F, 15), 
+		STONE(1, 131, 4.0F, 1.0F, 5), 
+		IRON(2, 250, 6.0F, 2.0F, 14), 
+		DIAMOND(3, 1561, 8.0F, 3.0F, 10), 
+		GOLD(0, 32, 12.0F, 0.0F, 22);
+		*/
+		public static final Item.ToolMaterial LapisToolMaterial = EnumHelper.addToolMaterial("LapisToolMaterial", 2, 200, 7.0F, 2.0F, 20);
+		public static final Item.ToolMaterial RedstoneToolMaterial = EnumHelper.addToolMaterial("RedstoneToolMaterial", 2, 200, 7.0F, 2.0F, 20);
+		public static final Item.ToolMaterial QuartzToolMaterial = EnumHelper.addToolMaterial("QuartzToolMaterial", 2, 200, 7.0F, 2.0F, 20);
+		public static final Item.ToolMaterial GlowstoneToolMaterial = EnumHelper.addToolMaterial("GlowstoneToolMaterial", 2, 200, 7.0F, 2.0F, 20);
+		public static final Item.ToolMaterial EmeraldToolMaterial = EnumHelper.addToolMaterial("EmeraldToolMaterial", 4, 2000, 12.0F, 4.0F, 22);
+		public static Item lapis_sword;
+		public static Item lapis_pickaxe;
+		public static Item lapis_spade;
+		public static Item lapis_axe;
+		public static Item lapis_hoe;
+		public static Item redstone_sword;
+		public static Item redstone_pickaxe;
+		public static Item redstone_spade;
+		public static Item redstone_axe;
+		public static Item redstone_hoe;
+		public static Item quartz_sword;
+		public static Item quartz_pickaxe;
+		public static Item quartz_spade;
+		public static Item quartz_axe;
+		public static Item quartz_hoe;
+		public static Item glowstone_sword;
+		public static Item glowstone_pickaxe;
+		public static Item glowstone_spade;
+		public static Item glowstone_axe;
+		public static Item glowstone_hoe;
+		public static Item emerald_sword;
+		public static Item emerald_pickaxe;
+		public static Item emerald_spade;
+		public static Item emerald_axe;
+		public static Item emerald_hoe;
+		/*Armour 
+		  LEATHER("leather", 5, new int[]{1, 3, 2, 1}, 15),
+	       CHAIN("chainmail", 15, new int[]{2, 5, 4, 1}, 12),
+	       IRON("iron", 15, new int[]{2, 6, 5, 2}, 9),
+	       GOLD("gold", 7, new int[]{2, 5, 3, 1}, 25),
+	       DIAMOND("diamond", 33, new int[]{3, 8, 6, 3}, 10);
+		 */
+		public static final ItemArmor.ArmorMaterial LapisArmorMaterial = EnumHelper.addArmorMaterial("LapisArmorMaterial", 10, new int[]{2,6,5,2}, 15);
+		public static final ItemArmor.ArmorMaterial RedstoneArmorMaterial = EnumHelper.addArmorMaterial("RedstoneArmorMaterial", 10, new int[]{2,6,5,2}, 15);
+		public static final ItemArmor.ArmorMaterial QuartzArmorMaterial = EnumHelper.addArmorMaterial("QuartzArmorMaterial", 10, new int[]{2,6,5,2}, 15);
+		public static final ItemArmor.ArmorMaterial GlowstoneArmorMaterial = EnumHelper.addArmorMaterial("GlowstoneArmorMaterial", 10, new int[]{2,6,5,2}, 15);
+		public static final ItemArmor.ArmorMaterial EmeraldArmorMaterial = EnumHelper.addArmorMaterial("EmeraldArmorMaterial", 40, new int[]{4,8,6,4}, 15);
+		public static Item lapis_helmet;
+		public static Item lapis_chestplate;
+		public static Item lapis_leggings;
+		public static Item lapis_boots;
+		public static Item redstone_helmet;
+		public static Item redstone_chestplate;
+		public static Item redstone_leggings;
+		public static Item redstone_boots;
+		public static Item quartz_helmet;
+		public static Item quartz_chestplate;
+		public static Item quartz_leggings;
+		public static Item quartz_boots;	
+		public static Item glowstone_helmet;
+		public static Item glowstone_chestplate;
+		public static Item glowstone_leggings;
+		public static Item glowstone_boots;
+		public static Item emerald_helmet;
+		public static Item emerald_chestplate;
+		public static Item emerald_leggings;
+		public static Item emerald_boots;
+		
+		public static void init()
+		{
+		//Ingots
+		lapis_lazuli_ingot = new Item().setUnlocalizedName("lapis_lazuli_ingot").setTextureName("armourexpansion:lapis_lazuli_ingot").setCreativeTab(Main.tabtools);
+	   	redstone_ingot = new Item().setUnlocalizedName("redstone_ingot").setTextureName("armourexpansion:redstone_ingot").setCreativeTab(Main.tabtools);
+	   	quartz_ingot = new Item().setUnlocalizedName("quartz_ingot").setTextureName("armourexpansion:quartz_ingot").setCreativeTab(Main.tabtools);
+	   	glowstone_ingot = new Item().setUnlocalizedName("glowstone_ingot").setTextureName("armourexpansion:glowstone_ingot").setCreativeTab(Main.tabtools);
+	   	//Tools
+	   	LapisToolMaterial.setRepairItem(new ItemStack(ModItems.lapis_lazuli_ingot));
+	   	RedstoneToolMaterial.setRepairItem(new ItemStack(ModItems.redstone_ingot));
+	   	QuartzToolMaterial.setRepairItem(new ItemStack(ModItems.quartz_ingot));
+	   	GlowstoneToolMaterial.setRepairItem(new ItemStack(ModItems.glowstone_ingot));
+	   	EmeraldToolMaterial.setRepairItem(new ItemStack(Items.emerald));
+	   	
+	   	LapisArmorMaterial.setRepairItem(new ItemStack(ModItems.lapis_lazuli_ingot));
+	   	RedstoneArmorMaterial.setRepairItem(new ItemStack(ModItems.redstone_ingot));
+	   	QuartzArmorMaterial.setRepairItem(new ItemStack(ModItems.quartz_ingot));
+	   	GlowstoneArmorMaterial.setRepairItem(new ItemStack(ModItems.glowstone_ingot));
+	   	EmeraldArmorMaterial.setRepairItem(new ItemStack(Items.emerald));
+	   	
+	   	lapis_sword = new ItemModSword(LapisToolMaterial).setUnlocalizedName("lapis_sword").setTextureName("armourexpansion:lapis_sword").setCreativeTab(Main.tabtools);
+	   	lapis_pickaxe = new ItemModPickaxe(LapisToolMaterial).setUnlocalizedName("lapis_pickaxe").setTextureName("armourexpansion:lapis_pickaxe").setCreativeTab(Main.tabtools);
+	   	lapis_spade = new ItemModSpade(LapisToolMaterial).setUnlocalizedName("lapis_spade").setTextureName("armourexpansion:lapis_spade").setCreativeTab(Main.tabtools);
+	   	lapis_axe = new ItemModAxe(LapisToolMaterial).setUnlocalizedName("lapis_axe").setTextureName("armourexpansion:lapis_axe").setCreativeTab(Main.tabtools);
+	   	lapis_hoe = new ItemModHoe(LapisToolMaterial).setUnlocalizedName("lapis_hoe").setTextureName("armourexpansion:lapis_hoe").setCreativeTab(Main.tabtools);
+	   	redstone_sword = new ItemModSword(RedstoneToolMaterial).setUnlocalizedName("redstone_sword").setTextureName("armourexpansion:redstone_sword").setCreativeTab(Main.tabtools);
+	   	redstone_pickaxe = new ItemModPickaxe(RedstoneToolMaterial).setUnlocalizedName("redstone_pickaxe").setTextureName("armourexpansion:redstone_pickaxe").setCreativeTab(Main.tabtools);
+	   	redstone_spade = new ItemModSpade(RedstoneToolMaterial).setUnlocalizedName("redstone_spade").setTextureName("armourexpansion:redstone_spade").setCreativeTab(Main.tabtools);
+	   	redstone_axe = new ItemModAxe(RedstoneToolMaterial).setUnlocalizedName("redstone_axe").setTextureName("armourexpansion:redstone_axe").setCreativeTab(Main.tabtools);
+	   	redstone_hoe = new ItemModHoe(RedstoneToolMaterial).setUnlocalizedName("redstone_hoe").setTextureName("armourexpansion:redstone_hoe").setCreativeTab(Main.tabtools);
+	   	quartz_sword = new ItemModSword(QuartzToolMaterial).setUnlocalizedName("quartz_sword").setTextureName("armourexpansion:quartz_sword").setCreativeTab(Main.tabtools);
+	   	quartz_pickaxe = new ItemModPickaxe(QuartzToolMaterial).setUnlocalizedName("quartz_pickaxe").setTextureName("armourexpansion:quartz_pickaxe").setCreativeTab(Main.tabtools);
+	   	quartz_spade = new ItemModSpade(QuartzToolMaterial).setUnlocalizedName("quartz_spade").setTextureName("armourexpansion:quartz_spade").setCreativeTab(Main.tabtools);
+	   	quartz_axe = new ItemModAxe(QuartzToolMaterial).setUnlocalizedName("quartz_axe").setTextureName("armourexpansion:quartz_axe").setCreativeTab(Main.tabtools);
+	  	quartz_hoe= new ItemModHoe(QuartzToolMaterial).setUnlocalizedName("quartz_hoe").setTextureName("armourexpansion:quartz_hoe").setCreativeTab(Main.tabtools);
+	   	glowstone_sword = new ItemModSword(GlowstoneToolMaterial).setUnlocalizedName("glowstone_sword").setTextureName("armourexpansion:glowstone_sword").setCreativeTab(Main.tabtools);
+	   	glowstone_pickaxe = new ItemModPickaxe(GlowstoneToolMaterial).setUnlocalizedName("glowstone_pickaxe").setTextureName("armourexpansion:glowstone_pickaxe").setCreativeTab(Main.tabtools);
+	   	glowstone_spade = new ItemModSpade(GlowstoneToolMaterial).setUnlocalizedName("glowstone_spade").setTextureName("armourexpansion:glowstone_spade").setCreativeTab(Main.tabtools);
+	   	glowstone_axe = new ItemModAxe(GlowstoneToolMaterial).setUnlocalizedName("glowstone_axe").setTextureName("armourexpansion:glowstone_axe").setCreativeTab(Main.tabtools);
+	   	glowstone_hoe = new ItemModHoe(GlowstoneToolMaterial).setUnlocalizedName("glowstone_hoe").setTextureName("armourexpansion:glowstone_hoe").setCreativeTab(Main.tabtools);
+	   	emerald_sword = new ItemModSword(EmeraldToolMaterial).setUnlocalizedName("emerald_sword").setTextureName("armourexpansion:emerald_sword").setCreativeTab(Main.tabtools);
+	   	emerald_pickaxe = new ItemModPickaxe(EmeraldToolMaterial).setUnlocalizedName("emerald_pickaxe").setTextureName("armourexpansion:emerald_pickaxe").setCreativeTab(Main.tabtools);
+	   	emerald_spade = new ItemModSpade(EmeraldToolMaterial).setUnlocalizedName("emerald_spade").setTextureName("armourexpansion:emerald_spade").setCreativeTab(Main.tabtools);
+	   	emerald_axe = new ItemModAxe(EmeraldToolMaterial).setUnlocalizedName("emerald_axe").setTextureName("armourexpansion:emerald_axe").setCreativeTab(Main.tabtools);
+	   	emerald_hoe = new ItemModHoe(EmeraldToolMaterial).setUnlocalizedName("emerald_hoe").setTextureName("armourexpansion:emerald_hoe").setCreativeTab(Main.tabtools);
+	   	//Armor
+	   	lapis_helmet = new ItemLapisArmor(LapisArmorMaterial, 0, 0).setUnlocalizedName("lapis_helmet").setTextureName("armourexpansion:lapis_helmet").setCreativeTab(Main.tabarmour);
+	   	lapis_chestplate = new ItemLapisArmor(LapisArmorMaterial, 0, 1).setUnlocalizedName("lapis_chestplate").setTextureName("armourexpansion:lapis_chestplate").setCreativeTab(Main.tabarmour);
+	   	lapis_leggings = new ItemLapisArmor(LapisArmorMaterial, 0, 2).setUnlocalizedName("lapis_leggings").setTextureName("armourexpansion:lapis_leggings").setCreativeTab(Main.tabarmour);
+	   	lapis_boots = new ItemLapisArmor(LapisArmorMaterial, 0, 3).setUnlocalizedName("lapis_boots").setTextureName("armourexpansion:lapis_boots").setCreativeTab(Main.tabarmour);
+	   	redstone_helmet = new ItemRedstoneArmor(RedstoneArmorMaterial, 0, 0).setUnlocalizedName("redstone_helmet").setTextureName("armourexpansion:redstone_helmet").setCreativeTab(Main.tabarmour);
+	  	redstone_chestplate = new ItemRedstoneArmor(RedstoneArmorMaterial, 0, 1).setUnlocalizedName("redstone_chestplate").setTextureName("armourexpansion:redstone_chestplate").setCreativeTab(Main.tabarmour);
+	   	redstone_leggings = new ItemRedstoneArmor(RedstoneArmorMaterial, 0, 2).setUnlocalizedName("redstone_leggings").setTextureName("armourexpansion:redstone_leggings").setCreativeTab(Main.tabarmour);
+	   	redstone_boots = new ItemRedstoneArmor(RedstoneArmorMaterial, 0, 3).setUnlocalizedName("redstone_boots").setTextureName("armourexpansion:redstone_boots").setCreativeTab(Main.tabarmour);
+	   	quartz_helmet = new ItemQuartzArmor(QuartzArmorMaterial, 0, 0).setUnlocalizedName("quartz_helmet").setTextureName("armourexpansion:quartz_helmet").setCreativeTab(Main.tabarmour);
+	   	quartz_chestplate = new ItemQuartzArmor(QuartzArmorMaterial, 0, 1).setUnlocalizedName("quartz_chestplate").setTextureName("armourexpansion:quartz_chestplate").setCreativeTab(Main.tabarmour);
+	   	quartz_leggings = new ItemQuartzArmor(QuartzArmorMaterial, 0, 2).setUnlocalizedName("quartz_leggings").setTextureName("armourexpansion:quartz_leggings").setCreativeTab(Main.tabarmour);
+	   	quartz_boots = new ItemQuartzArmor(QuartzArmorMaterial, 0, 3).setUnlocalizedName("quartz_boots").setTextureName("armourexpansion:quartz_boots").setCreativeTab(Main.tabarmour);
+	   	glowstone_helmet = new ItemGlowstoneArmor(GlowstoneArmorMaterial, 0, 0).setUnlocalizedName("glowstone_helmet").setTextureName("armourexpansion:glowstone_helmet").setCreativeTab(Main.tabarmour);
+	   	glowstone_chestplate = new ItemGlowstoneArmor(GlowstoneArmorMaterial, 0, 1).setUnlocalizedName("glowstone_chestplate").setTextureName("armourexpansion:glowstone_chestplate").setCreativeTab(Main.tabarmour);
+	  	glowstone_leggings = new ItemGlowstoneArmor(GlowstoneArmorMaterial, 0, 2).setUnlocalizedName("glowstone_leggings").setTextureName("armourexpansion:glowstone_leggings").setCreativeTab(Main.tabarmour);
+	   	glowstone_boots = new ItemGlowstoneArmor(GlowstoneArmorMaterial, 0, 3).setUnlocalizedName("glowstone_boots").setTextureName("armourexpansion:glowstone_boots").setCreativeTab(Main.tabarmour);
+	   	emerald_helmet = new ItemEmeraldArmor(EmeraldArmorMaterial, 0, 0).setUnlocalizedName("emerald_helmet").setTextureName("armourexpansion:emerald_helmet").setCreativeTab(Main.tabarmour);
+	   	emerald_chestplate = new ItemEmeraldArmor(EmeraldArmorMaterial, 0, 1).setUnlocalizedName("emerald_chestplate").setTextureName("armourexpansion:emerald_chestplate").setCreativeTab(Main.tabarmour);
+	   	emerald_leggings = new ItemEmeraldArmor(EmeraldArmorMaterial, 0, 2).setUnlocalizedName("emerald_leggings").setTextureName("armourexpansion:emerald_leggings").setCreativeTab(Main.tabarmour);
+	   	emerald_boots = new ItemEmeraldArmor(EmeraldArmorMaterial, 0, 3).setUnlocalizedName("emerald_boots").setTextureName("armourexpansion:emerald_boots").setCreativeTab(Main.tabarmour);
+		}
+	 	public static void register ()
+	   	{
+		//Ingots
+		GameRegistry.registerItem(lapis_lazuli_ingot, lapis_lazuli_ingot.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_ingot, redstone_ingot.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_ingot, quartz_ingot.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_ingot, glowstone_ingot.getUnlocalizedName().substring(5));
+		//Tools
+		GameRegistry.registerItem(lapis_sword, lapis_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(lapis_pickaxe, lapis_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(lapis_spade, lapis_spade.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(lapis_axe, lapis_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(lapis_hoe, lapis_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_sword, redstone_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_pickaxe, redstone_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_spade, redstone_spade.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_axe, redstone_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_hoe, redstone_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_sword, quartz_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_pickaxe, quartz_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_spade, quartz_spade.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_axe, quartz_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_hoe, quartz_hoe.getUnlocalizedName().substring(5));    	
+		GameRegistry.registerItem(glowstone_sword, glowstone_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_pickaxe, glowstone_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_spade, glowstone_spade.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_axe, glowstone_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_hoe, glowstone_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_sword, emerald_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_pickaxe, emerald_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_spade, emerald_spade.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_axe, emerald_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_hoe, emerald_hoe.getUnlocalizedName().substring(5));
+		//Armor
+		GameRegistry.registerItem(lapis_helmet, lapis_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(lapis_chestplate, lapis_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(lapis_leggings, lapis_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(lapis_boots, lapis_boots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_helmet, redstone_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_chestplate, redstone_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_leggings, redstone_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(redstone_boots, redstone_boots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_helmet, quartz_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_chestplate, quartz_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_leggings, quartz_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(quartz_boots, quartz_boots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_helmet, glowstone_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_chestplate, glowstone_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_leggings, glowstone_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glowstone_boots, glowstone_boots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_helmet, emerald_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_chestplate, emerald_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_leggings, emerald_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(emerald_boots, emerald_boots.getUnlocalizedName().substring(5));
+		}
+}
