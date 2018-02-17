@@ -2,8 +2,8 @@ package com.cookiehook.armorexpansion.item;
 
 import java.util.Map;
 
-import com.cookiehook.armorexpansion.help.Reference;
 import com.cookiehook.armorexpansion.init.ModItems;
+import com.cookiehook.armorexpansion.util.Reference;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -21,7 +21,7 @@ public class ItemLapisArmor extends BaseArmor {
 	 * @param material - The ArmorMaterial needed. This sets properties such as durability, damage reduction etc.
 	 * @param renderIndex - Used by vanilla armor to choose a texture. We override this with getArmorTexture.
 	 * @param armorType - Whether this is a helmet (0), chestplate (1), leggings (2) or boots (3).
-	 * @param name - Name used for unlocalised and texture names.
+	 * @param name - Name used for unlocalised name.
 	 */
 	public ItemLapisArmor(ArmorMaterial material, int renderIndex, int armorType, String name) {
 		//This super call passes all the arguments to the BaseArmor constructor, which actually does the work.
@@ -48,18 +48,22 @@ public class ItemLapisArmor extends BaseArmor {
 			
 			//Gets a Map (called a dictionary in some languages) containing all the
 			//enchantments on this armor, indexed by enchantment ID.
-			Map ench = EnchantmentHelper.getEnchantments(armor);
+			Map<Integer, Integer> ench = EnchantmentHelper.getEnchantments(armor);
 			
 			//If the enchantment with ID 6 (aqua affinity) is not on the armor, add it.
 			if (!ench.containsKey(6))
 				armor.addEnchantment(Enchantment.aquaAffinity, 1);
+			//If the enchantment with ID 8 (depth strider) is not on the armor, add it.
+			if (!ench.containsKey(8))
+				armor.addEnchantment(Enchantment.depthStrider, 3);
 		} 
 		
 		//If the player isn't currently wearing a full set of lapis armor, remove
 		//the enchantments from the currently worn armor.
 		else {
-			Map ench = EnchantmentHelper.getEnchantments(armor);
+			Map<Integer, Integer> ench = EnchantmentHelper.getEnchantments(armor);
 			ench.remove(6);
+			ench.remove(8);
 			EnchantmentHelper.setEnchantments(ench, armor);
 		}
 	}

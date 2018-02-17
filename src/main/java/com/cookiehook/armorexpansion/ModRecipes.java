@@ -1,11 +1,11 @@
 package com.cookiehook.armorexpansion;
 
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-
 import com.cookiehook.armorexpansion.init.ModItems;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModRecipes 
 {
@@ -256,5 +256,25 @@ public class ModRecipes
 				"A A",
 				"A A",
 				'A', Items.emerald);
+		
+		//Convert ingots into blocks, to return back to dust form.
+		GameRegistry.addRecipe(new ItemStack(Blocks.lapis_block),
+				"AAA",
+				"AAA",
+				"AAA",
+				'A', ModItems.lapis_lazuli_ingot);
+		GameRegistry.addRecipe(new ItemStack(Blocks.redstone_block),
+				"AAA",
+				"AAA",
+				"AAA",
+				'A', ModItems.redstone_ingot);
+		GameRegistry.addRecipe(new ItemStack(Blocks.glowstone),
+				"AA",
+				"AA",
+				'A', ModItems.glowstone_ingot);
+		GameRegistry.addRecipe(new ItemStack(Blocks.quartz_block),
+				"AA",
+				"AA",
+				'A', ModItems.quartz_ingot);
 	}
 }
