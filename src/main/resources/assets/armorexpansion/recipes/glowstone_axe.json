@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "armorexpansion:glowstone_ingot"
+    }
+  },
+  "result": {
+    "item": "armorexpansion:glowstone_axe",
+    "data": 0
+  }
+}

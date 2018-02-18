@@ -1,10 +1,13 @@
 package com.cookiehook.armorexpansion.item;
 
-import com.cookiehook.armorexpansion.init.ModTabs;
+import com.cookiehook.armorexpansion.Main;
+import com.cookiehook.armorexpansion.init.ModItems;
+import com.cookiehook.armorexpansion.util.IHasModel;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSword;
 
-public class ItemModSword extends ItemSword {
+public class ItemModSword extends ItemSword implements IHasModel {
 	
 	/**
 	 * Creates a sword object, using the following parameters:
@@ -16,6 +19,12 @@ public class ItemModSword extends ItemSword {
 		super(toolMaterial);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(ModTabs.getToolsTab());
+		setCreativeTab(CreativeTabs.COMBAT);
+		ModItems.ITEMS.add(this);
+	}
+	
+	@Override
+	public void registerModels() {
+		Main.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 }

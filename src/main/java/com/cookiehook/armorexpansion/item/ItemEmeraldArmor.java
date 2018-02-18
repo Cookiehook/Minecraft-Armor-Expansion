@@ -1,7 +1,6 @@
 package com.cookiehook.armorexpansion.item;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -36,16 +35,5 @@ public class ItemEmeraldArmor extends BaseArmor {
 				&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() instanceof ItemEmeraldArmor) {
 			player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 10, 0, false, false));
 		}
-	}
-
-	/*
-	 * Used to set which material can be used to repair this armor in an anvil.
-	 * Unlike ToolMaterial, ArmorMaterial doesn't have a seetRepairMaterial method, so we have to
-	 * set it in the class.
-	 * Result is that any armor of this class can be repaired using a the item shown below.
-	 */
-	@Override
-	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-		return stack.getItem() == Items.EMERALD;
 	}
 }

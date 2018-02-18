@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "armorexpansion:quartz_ingot"
+    }
+  },
+  "result": {
+    "item": "minecraft:quartz_block",
+	"data": 0
+  }
+}

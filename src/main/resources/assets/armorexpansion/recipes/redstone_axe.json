@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "armorexpansion:redstone_ingot"
+    }
+  },
+  "result": {
+    "item": "armorexpansion:redstone_axe",
+    "data": 0
+  }
+}

@@ -1,10 +1,13 @@
 package com.cookiehook.armorexpansion.item;
 
-import com.cookiehook.armorexpansion.init.ModTabs;
+import com.cookiehook.armorexpansion.Main;
+import com.cookiehook.armorexpansion.init.ModItems;
+import com.cookiehook.armorexpansion.util.IHasModel;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemAxe;
 
-public class ItemModAxe extends ItemAxe {	
+public class ItemModAxe extends ItemAxe implements IHasModel {	
 	
 	/**
 	 * Creates an axe object, using the following parameters:
@@ -16,6 +19,12 @@ public class ItemModAxe extends ItemAxe {
 		super(toolMaterial, 8.0F, -3.2F);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(ModTabs.getToolsTab());
+		setCreativeTab(CreativeTabs.TOOLS);
+		ModItems.ITEMS.add(this);
+	}
+	
+	@Override
+	public void registerModels() {
+		Main.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 }

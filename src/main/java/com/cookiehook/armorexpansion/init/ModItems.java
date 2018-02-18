@@ -16,8 +16,6 @@ import com.cookiehook.armorexpansion.item.ItemQuartzArmor;
 import com.cookiehook.armorexpansion.item.ItemRedstoneArmor;
 import com.cookiehook.armorexpansion.util.Reference;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -26,11 +24,11 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
 
-	
+	/** List of all items, added to by each item's constructor.
+	 * This is then processed by the RegistryHandler when registering items.*/
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
 	/*
@@ -178,124 +176,11 @@ public class ModItems {
 		QuartzToolMaterial.setRepairItem(new ItemStack(ModItems.quartz_ingot));
 		GlowstoneToolMaterial.setRepairItem(new ItemStack(ModItems.glowstone_ingot));
 		EmeraldToolMaterial.setRepairItem(new ItemStack(Items.EMERALD));
+		
+		LapisArmorMaterial.setRepairItem(new ItemStack(lapis_lazuli_ingot));
+	   	RedstoneArmorMaterial.setRepairItem(new ItemStack(redstone_ingot));
+	   	QuartzArmorMaterial.setRepairItem(new ItemStack(quartz_ingot));
+	   	GlowstoneArmorMaterial.setRepairItem(new ItemStack(glowstone_ingot));
+	   	EmeraldArmorMaterial.setRepairItem(new ItemStack(Items.EMERALD));
 	}
-	
-	public static void register() {
-		// Ingots
-		GameRegistry.register(lapis_lazuli_ingot);
-		GameRegistry.register(redstone_ingot);
-		GameRegistry.register(quartz_ingot);
-		GameRegistry.register(glowstone_ingot);
-		// Tools
-		GameRegistry.register(lapis_sword);
-		GameRegistry.register(lapis_pickaxe);
-		GameRegistry.register(lapis_spade);
-		GameRegistry.register(lapis_axe);
-		GameRegistry.register(lapis_hoe);
-		GameRegistry.register(redstone_sword);
-		GameRegistry.register(redstone_pickaxe);
-		GameRegistry.register(redstone_spade);
-		GameRegistry.register(redstone_axe);
-		GameRegistry.register(redstone_hoe);
-		GameRegistry.register(quartz_sword);
-		GameRegistry.register(quartz_pickaxe);
-		GameRegistry.register(quartz_spade);
-		GameRegistry.register(quartz_axe);
-		GameRegistry.register(quartz_hoe);
-		GameRegistry.register(glowstone_sword);
-		GameRegistry.register(glowstone_pickaxe);
-		GameRegistry.register(glowstone_spade);
-		GameRegistry.register(glowstone_axe);
-		GameRegistry.register(glowstone_hoe);
-		GameRegistry.register(emerald_sword);
-		GameRegistry.register(emerald_pickaxe);
-		GameRegistry.register(emerald_spade);
-		GameRegistry.register(emerald_axe);
-		GameRegistry.register(emerald_hoe);
-		// Armor
-		GameRegistry.register(lapis_helmet);
-		GameRegistry.register(lapis_chestplate);
-		GameRegistry.register(lapis_leggings);
-		GameRegistry.register(lapis_boots);
-		GameRegistry.register(redstone_helmet);
-		GameRegistry.register(redstone_chestplate);
-		GameRegistry.register(redstone_leggings);
-		GameRegistry.register(redstone_boots);
-		GameRegistry.register(quartz_helmet);
-		GameRegistry.register(quartz_chestplate);
-		GameRegistry.register(quartz_leggings);
-		GameRegistry.register(quartz_boots);
-		GameRegistry.register(glowstone_helmet);
-		GameRegistry.register(glowstone_chestplate);
-		GameRegistry.register(glowstone_leggings);
-		GameRegistry.register(glowstone_boots);
-		GameRegistry.register(emerald_helmet);
-		GameRegistry.register(emerald_chestplate);
-		GameRegistry.register(emerald_leggings);
-		GameRegistry.register(emerald_boots);
-	}
-	
-	/** 
-	 * Implements rendering of the items in the inventory. Otherwise we get the black and purple cubes.
-	 * Should be called in init.
-	 * */
-	  public static void registerRenders()
-	  {
-	    registerRender(lapis_lazuli_ingot);
-	    registerRender(redstone_ingot);
-	    registerRender(quartz_ingot);
-	    registerRender(glowstone_ingot);
-	    
-	    registerRender(lapis_sword);
-	    registerRender(lapis_pickaxe);
-	    registerRender(lapis_spade);
-	    registerRender(lapis_axe);
-	    registerRender(lapis_hoe);
-	    registerRender(redstone_sword);
-	    registerRender(redstone_pickaxe);
-	    registerRender(redstone_spade);
-	    registerRender(redstone_axe);
-	    registerRender(redstone_hoe);
-	    registerRender(quartz_sword);
-	    registerRender(quartz_pickaxe);
-	    registerRender(quartz_spade);
-	    registerRender(quartz_axe);
-	    registerRender(quartz_hoe);
-	    registerRender(glowstone_sword);
-	    registerRender(glowstone_pickaxe);
-	    registerRender(glowstone_spade);
-	    registerRender(glowstone_axe);
-	    registerRender(glowstone_hoe);
-	    registerRender(emerald_sword);
-	    registerRender(emerald_pickaxe);
-	    registerRender(emerald_spade);
-	    registerRender(emerald_axe);
-	    registerRender(emerald_hoe);
-	    
-	    registerRender(lapis_helmet);
-	    registerRender(lapis_chestplate);
-	    registerRender(lapis_leggings);
-	    registerRender(lapis_boots);
-	    registerRender(redstone_helmet);
-	    registerRender(redstone_chestplate);
-	    registerRender(redstone_leggings);
-	    registerRender(redstone_boots);
-	    registerRender(quartz_helmet);
-	    registerRender(quartz_chestplate);
-	    registerRender(quartz_leggings);
-	    registerRender(quartz_boots);
-	    registerRender(glowstone_helmet);
-	    registerRender(glowstone_chestplate);
-	    registerRender(glowstone_leggings);
-	    registerRender(glowstone_boots);
-	    registerRender(emerald_helmet);
-	    registerRender(emerald_chestplate);
-	    registerRender(emerald_leggings);
-	    registerRender(emerald_boots);
-	  }
-	  
-	  private static void registerRender(Item item)
-	  {
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-	  }
 }

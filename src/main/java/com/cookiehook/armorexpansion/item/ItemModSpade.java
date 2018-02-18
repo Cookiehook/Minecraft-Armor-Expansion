@@ -1,10 +1,13 @@
 package com.cookiehook.armorexpansion.item;
 
-import com.cookiehook.armorexpansion.init.ModTabs;
+import com.cookiehook.armorexpansion.Main;
+import com.cookiehook.armorexpansion.init.ModItems;
+import com.cookiehook.armorexpansion.util.IHasModel;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;
 
-public class ItemModSpade extends ItemSpade {
+public class ItemModSpade extends ItemSpade implements IHasModel {
 	/**
 	 * Creates a spade object, using the following parameters:
 	 * @param material - The ToolMaterial needed. This sets properties such as efficiency, durability reduction etc.
@@ -15,7 +18,12 @@ public class ItemModSpade extends ItemSpade {
 		super(toolMaterial);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(ModTabs.getToolsTab());
+		setCreativeTab(CreativeTabs.TOOLS);
+		ModItems.ITEMS.add(this);
 	}
 
+	@Override
+	public void registerModels() {
+		Main.proxy.registerItemRenderer(this, 0, "inventory");
+	}
 }

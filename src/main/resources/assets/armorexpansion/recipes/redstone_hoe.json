@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "armorexpansion:redstone_ingot"
+    }
+  },
+  "result": {
+    "item": "armorexpansion:redstone_hoe"
+  }
+}
