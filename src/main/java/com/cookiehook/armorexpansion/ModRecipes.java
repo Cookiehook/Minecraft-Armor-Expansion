@@ -26,10 +26,10 @@ public class ModRecipes
 		 *  Food - 0.35F
 		 *  Sand - 0.1F
 		 */
-		GameRegistry.addSmelting(new ItemStack(Items.dye, 1, 4), new ItemStack(ModItems.lapis_lazuli_ingot), 1.0F);
-		GameRegistry.addSmelting(Items.redstone, new ItemStack(ModItems.redstone_ingot), 1.0F);
-		GameRegistry.addSmelting(Items.quartz, new ItemStack(ModItems.quartz_ingot), 1.0F);
-		GameRegistry.addSmelting(Items.glowstone_dust, new ItemStack(ModItems.glowstone_ingot), 1.0F);
+		GameRegistry.addSmelting(new ItemStack(Items.DYE, 1, 4), new ItemStack(ModItems.lapis_lazuli_ingot), 1.0F);
+		GameRegistry.addSmelting(Items.REDSTONE, new ItemStack(ModItems.redstone_ingot), 1.0F);
+		GameRegistry.addSmelting(Items.QUARTZ, new ItemStack(ModItems.quartz_ingot), 1.0F);
+		GameRegistry.addSmelting(Items.GLOWSTONE_DUST, new ItemStack(ModItems.glowstone_ingot), 1.0F);
 		
 		/*
 		 * The addRecipe method takes the following arguments:
@@ -43,127 +43,127 @@ public class ModRecipes
 				" A ",
 				" A ",
 				" B ",
-				'A', ModItems.lapis_lazuli_ingot, 'B', Items.stick);
+				'A', ModItems.lapis_lazuli_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.lapis_pickaxe),
 				"AAA",
 				" B ",
 				" B ",
-						'A', ModItems.lapis_lazuli_ingot, 'B', Items.stick);
+						'A', ModItems.lapis_lazuli_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.lapis_spade),
 				" A ",
 				" B ",
 				" B ",
-				'A', ModItems.lapis_lazuli_ingot, 'B', Items.stick);
+				'A', ModItems.lapis_lazuli_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.lapis_axe),
 				"AA ",
 				"AB ",
 				" B ",
-				'A', ModItems.lapis_lazuli_ingot, 'B', Items.stick);
+				'A', ModItems.lapis_lazuli_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.lapis_hoe),
 				"AA ",
 				" B ",
 				" B ",
-				'A', ModItems.lapis_lazuli_ingot, 'B', Items.stick);
+				'A', ModItems.lapis_lazuli_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.redstone_sword),
 				" A ",
 				" A ",
 				" B ",
-				'A', ModItems.redstone_ingot, 'B', Items.stick);
+				'A', ModItems.redstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.redstone_pickaxe),
 				"AAA",
 				" B ",
 				" B ",
-				'A', ModItems.redstone_ingot, 'B', Items.stick);
+				'A', ModItems.redstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.redstone_spade),
 				" A ",
 				" B ",
 				" B ",
-				'A', ModItems.redstone_ingot, 'B', Items.stick);
+				'A', ModItems.redstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.redstone_axe),
 				"AA ",
 				"AB ",
 				" B ",
-				'A', ModItems.redstone_ingot, 'B', Items.stick);
+				'A', ModItems.redstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.redstone_hoe),
 				"AA ",
 				" B ",
 				" B ",
-				'A', ModItems.redstone_ingot, 'B', Items.stick);
+				'A', ModItems.redstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.quartz_sword),
 				" A ",
 				" A ",
 				" B ",
-				'A', ModItems.quartz_ingot, 'B', Items.stick);
+				'A', ModItems.quartz_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.quartz_pickaxe),
 				"AAA",
 				" B ",
 				" B ",
-				'A', ModItems.quartz_ingot, 'B', Items.stick);
+				'A', ModItems.quartz_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.quartz_spade),
 				" A ",
 				" B ",
 				" B ",
-				'A', ModItems.quartz_ingot, 'B', Items.stick);
+				'A', ModItems.quartz_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.quartz_axe),
 				"AA ",
 				"AB ",
 				" B ",
-				'A', ModItems.quartz_ingot, 'B', Items.stick);
+				'A', ModItems.quartz_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.quartz_hoe),
 				"AA ",
 				" B ",
 				" B ",
-				'A', ModItems.quartz_ingot, 'B', Items.stick);
+				'A', ModItems.quartz_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.glowstone_sword),
 				" A ",
 				" A ",
 				" B ",
-				'A', ModItems.glowstone_ingot, 'B', Items.stick);
+				'A', ModItems.glowstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.glowstone_pickaxe),
 				"AAA",
 				" B ",
 				" B ",
-				'A', ModItems.glowstone_ingot, 'B', Items.stick);
+				'A', ModItems.glowstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.glowstone_spade),
 				" A ",
 				" B ",
 				" B ",
-				'A', ModItems.glowstone_ingot, 'B', Items.stick);
+				'A', ModItems.glowstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.glowstone_axe),
 				"AA ",
 				"AB ",
 				" B ",
-				'A', ModItems.glowstone_ingot, 'B', Items.stick);
+				'A', ModItems.glowstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.glowstone_hoe),
 				"AA ",
 				" B ",
 				" B ",
-				'A', ModItems.glowstone_ingot, 'B', Items.stick);
+				'A', ModItems.glowstone_ingot, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_sword),
 				" A ",
 				" A ",
 				" B ",
-				'A', Items.emerald, 'B', Items.stick);
+				'A', Items.EMERALD, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_pickaxe),
 				"AAA",
 				" B ",
 				" B ",
-				'A', Items.emerald, 'B', Items.stick);
+				'A', Items.EMERALD, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_spade),
 				" A ",
 				" B ",
 				" B ",
-				'A', Items.emerald, 'B', Items.stick);
+				'A', Items.EMERALD, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_axe),
 				"AA ",
 				"AB ",
 				" B ",
-				'A', Items.emerald, 'B', Items.stick);
+				'A', Items.EMERALD, 'B', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_hoe),
 				"AA ",
 				" B ",
 				" B ",
-				'A', Items.emerald, 'B', Items.stick);
+				'A', Items.EMERALD, 'B', Items.STICK);
 		
 		//Armour
 		GameRegistry.addRecipe(new ItemStack(ModItems.lapis_helmet),
@@ -241,38 +241,38 @@ public class ModRecipes
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_helmet),
 				"AAA",
 				"A A",
-				'A', Items.emerald);
+				'A', Items.EMERALD);
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_chestplate),
 				"A A",
 				"AAA",
 				"AAA",
-				'A', Items.emerald);
+				'A', Items.EMERALD);
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_leggings),
 				"AAA",
 				"A A",
 				"A A",
-				'A', Items.emerald);
+				'A', Items.EMERALD);
 		GameRegistry.addRecipe(new ItemStack(ModItems.emerald_boots),
 				"A A",
 				"A A",
-				'A', Items.emerald);
+				'A', Items.EMERALD);
 		
 		//Convert ingots into blocks, to return back to dust form.
-		GameRegistry.addRecipe(new ItemStack(Blocks.lapis_block),
+		GameRegistry.addRecipe(new ItemStack(Blocks.LAPIS_BLOCK),
 				"AAA",
 				"AAA",
 				"AAA",
 				'A', ModItems.lapis_lazuli_ingot);
-		GameRegistry.addRecipe(new ItemStack(Blocks.redstone_block),
+		GameRegistry.addRecipe(new ItemStack(Blocks.REDSTONE_BLOCK),
 				"AAA",
 				"AAA",
 				"AAA",
 				'A', ModItems.redstone_ingot);
-		GameRegistry.addRecipe(new ItemStack(Blocks.glowstone),
+		GameRegistry.addRecipe(new ItemStack(Blocks.GLOWSTONE),
 				"AA",
 				"AA",
 				'A', ModItems.glowstone_ingot);
-		GameRegistry.addRecipe(new ItemStack(Blocks.quartz_block),
+		GameRegistry.addRecipe(new ItemStack(Blocks.QUARTZ_BLOCK),
 				"AA",
 				"AA",
 				'A', ModItems.quartz_ingot);
