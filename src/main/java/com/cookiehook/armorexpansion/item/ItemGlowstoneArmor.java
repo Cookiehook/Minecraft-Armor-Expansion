@@ -25,20 +25,16 @@ public class ItemGlowstoneArmor extends BaseArmor {
 
 	/*
 	 * Called every time the armor is updated by vanilla minecraft (20 times per second).
-	 * This checks that the armor in each slot (head, chest, legs, feet) is not empty, and is this
-	 * type of armor. If this is true, the potion effect is added for 210 ticks (10.5 seconds).
+	 * This checks that the armor in each slot (head, chest, legs, feet) is this type of armor.
+	 * If this is true, the potion effect is added for 210 ticks (10.5 seconds).
 	 * 210 ticks are used here as the NightVision effect starts to fluctuate below 10 seconds.
 	 * The result of this is players having the potion effect, only when wearing the entire armor set.
 	 */
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack armor) {
-		if (	player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null
-				&& player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() instanceof ItemGlowstoneArmor
-				&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null
+		if (	player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() instanceof ItemGlowstoneArmor
 				&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() instanceof ItemGlowstoneArmor
-				&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null
 				&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() instanceof ItemGlowstoneArmor
-				&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null
 				&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() instanceof ItemGlowstoneArmor) {
 			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 210, 0, false, false));
 			player.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 10, 0, false, false));
