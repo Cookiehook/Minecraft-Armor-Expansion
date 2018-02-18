@@ -24,13 +24,11 @@ public class Main {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		ModItems.setRepairMaterials();
-		ModItems.register();
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		proxy.registerRenders();
-		ModRecipes.addRecipes();
+		ModRecipes.addSmeltingRecipes();
 	}
 
 	@EventHandler

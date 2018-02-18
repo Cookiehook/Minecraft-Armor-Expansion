@@ -1,10 +1,13 @@
 package com.cookiehook.armorexpansion.item;
 
-import com.cookiehook.armorexpansion.init.ModTabs;
+import com.cookiehook.armorexpansion.Main;
+import com.cookiehook.armorexpansion.init.ModItems;
+import com.cookiehook.armorexpansion.util.IHasModel;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
 
-public class ItemModPickaxe extends ItemPickaxe {
+public class ItemModPickaxe extends ItemPickaxe implements IHasModel {
 	
 	/**
 	 * Creates a pickaxe object, using the following parameters:
@@ -16,6 +19,12 @@ public class ItemModPickaxe extends ItemPickaxe {
 		super(toolMaterial);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(ModTabs.getToolsTab());
+		setCreativeTab(CreativeTabs.TOOLS);
+		ModItems.ITEMS.add(this);
+	}
+	
+	@Override
+	public void registerModels() {
+		Main.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 }

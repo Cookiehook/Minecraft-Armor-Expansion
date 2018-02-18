@@ -1,10 +1,15 @@
 Check that all armor correctly gives potion effects.
 Check that lapis armor adds and removes appropriate enchantments.
 Check that lapis armor behaves correctly with pre-enchanted armor.
-Check that all armor and tools repair using the correct items.
+
+Check that all tools repair with the correct item.
+Repeat for armor.
+
+Check that all recipes are in the recipe book, in the correct tabs.
+Check that all recipes are given when picking up one ingot / emerald.
 Check that all crafting recipes are available (left pointing hoes & axes only). Include material blocks.
 Check that all smelting recipes are available.
 
+Check versioning is set correctly following the pattern: 1.7.10.1, where this mod is version 1 compatible with 1.7.10.
 Check that built mod loads on a client.
 Check that the mod loads on a server.
-Check versioning is set correctly following the pattern: 1.7.10.1, where this mod is version 1 compatible with 1.7.10.

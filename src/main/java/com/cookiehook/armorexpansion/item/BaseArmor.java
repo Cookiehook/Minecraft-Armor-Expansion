@@ -1,11 +1,14 @@
 package com.cookiehook.armorexpansion.item;
 
-import com.cookiehook.armorexpansion.init.ModTabs;
+import com.cookiehook.armorexpansion.Main;
+import com.cookiehook.armorexpansion.init.ModItems;
+import com.cookiehook.armorexpansion.util.IHasModel;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 
-public class BaseArmor extends ItemArmor {
+public class BaseArmor extends ItemArmor implements IHasModel {
 
 	/**
 	 * Used by each armor type to create an Armor object, setting thhe following properties.
@@ -19,6 +22,12 @@ public class BaseArmor extends ItemArmor {
 		super(material, renderIndex, armorType);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(ModTabs.getArmorTab());
+		setCreativeTab(CreativeTabs.COMBAT);
+		ModItems.ITEMS.add(this);
+	}
+	
+	@Override
+	public void registerModels() {
+		Main.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 }

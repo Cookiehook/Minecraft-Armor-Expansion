@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "armorexpansion:lapis_lazuli_ingot"
+    }
+  },
+  "result": {
+    "item": "minecraft:lapis_block"
+  }
+}

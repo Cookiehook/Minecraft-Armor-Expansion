@@ -8,7 +8,7 @@ public class Reference {
 	public static final String MOD_NAME = "Armor Expansion";
 
 	/** Displayed by Forge in the Mods menu */
-	public static final String VERSION = "1.11.2.1";
+	public static final String VERSION = "1.12.2.1";
 
 	/** Used to execute code on client and server */
 	public static final String COMMON_PROXY_CLASS = "com.cookiehook.armorexpansion.proxy.CommonProxy";

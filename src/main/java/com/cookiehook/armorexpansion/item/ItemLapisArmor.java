@@ -2,8 +2,6 @@ package com.cookiehook.armorexpansion.item;
 
 import java.util.Map;
 
-import com.cookiehook.armorexpansion.init.ModItems;
-
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -54,16 +52,5 @@ public class ItemLapisArmor extends BaseArmor {
 			ench.remove(Enchantment.getEnchantmentByID(8));
 			EnchantmentHelper.setEnchantments(ench, armor);
 		}
-	}
-
-	/*
-	 * Used to set which material can be used to repair this armor in an anvil.
-	 * Unlike ToolMaterial, ArmorMaterial doesn't have a seetRepairMaterial method, so we have to
-	 * set it in the class.
-	 * Result is that any armor of this class can be repaired using a the item shown below.
-	 */
-	@Override
-	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-		return stack.getItem() == ModItems.lapis_lazuli_ingot;
 	}
 }

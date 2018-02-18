@@ -1,7 +1,5 @@
 package com.cookiehook.armorexpansion.item;
 
-import com.cookiehook.armorexpansion.init.ModItems;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -37,16 +35,5 @@ public class ItemQuartzArmor extends BaseArmor {
 				&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() instanceof ItemQuartzArmor) {
 			player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 10, 2, false, false));
 		}
-	}
-
-	/*
-	 * Used to set which material can be used to repair this armor in an anvil.
-	 * Unlike ToolMaterial, ArmorMaterial doesn't have a seetRepairMaterial method, so we have to
-	 * set it in the class.
-	 * Result is that any armor of this class can be repaired using a the item shown below.
-	 */
-	@Override
-	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-		return stack.getItem() == ModItems.quartz_ingot;
 	}
 }

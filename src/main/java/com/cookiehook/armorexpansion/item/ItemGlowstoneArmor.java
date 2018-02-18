@@ -1,7 +1,5 @@
 package com.cookiehook.armorexpansion.item;
 
-import com.cookiehook.armorexpansion.init.ModItems;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -39,16 +37,5 @@ public class ItemGlowstoneArmor extends BaseArmor {
 			player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 210, 0, false, false));
 			player.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 10, 0, false, false));
 		}
-	}
-	
-	/*
-	 * Used to set which material can be used to repair this armor in an anvil.
-	 * Unlike ToolMaterial, ArmorMaterial doesn't have a seetRepairMaterial method, so we have to
-	 * set it in the class.
-	 * Result is that any armor of this class can be repaired using a the item shown below.
-	 */
-	@Override
-	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-		return stack.getItem() == ModItems.glowstone_ingot;
 	}
 }
