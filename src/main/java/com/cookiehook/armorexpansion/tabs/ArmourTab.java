@@ -3,7 +3,7 @@ package com.cookiehook.armorexpansion.tabs;
 import com.cookiehook.armorexpansion.init.ModItems;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class ArmourTab extends CreativeTabs {
 	
@@ -20,7 +20,7 @@ public class ArmourTab extends CreativeTabs {
 	 * Called by Minecraft to decide which icon to show in the creative menu.
 	 */
 	@Override
-	public Item getTabIconItem() {
-		return ModItems.emerald_helmet;
+	public ItemStack getTabIconItem() {
+		return new ItemStack(ModItems.emerald_helmet);
 	}
 }

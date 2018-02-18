@@ -25,19 +25,15 @@ public class ItemRedstoneArmor extends BaseArmor {
 
 	/*
 	 * Called every time the armor is updated by vanilla minecraft (20 times per second).
-	 * This checks that the armor in each slot (head, chest, legs, feet) is not empty, and is this
-	 * type of armor. If this is true, the fireResistance effect is added for 10 ticks (0.5 seconds).
+	 * This checks that the armor in each slot (head, chest, legs, feet) is this type of armor. 
+	 * If this is true, the fireResistance effect is added for 10 ticks (0.5 seconds).
 	 * The result of this is players having the potion effect, only when wearing the entire armor set.
 	 */
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack armor) {
-		if (	player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null
-				&& player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() instanceof ItemRedstoneArmor
-				&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null
+		if (	player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() instanceof ItemRedstoneArmor
 				&& player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() instanceof ItemRedstoneArmor
-				&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null
 				&& player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() instanceof ItemRedstoneArmor
-				&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null
 				&& player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() instanceof ItemRedstoneArmor) {
 			player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 10, 0, false, false));
 		}
